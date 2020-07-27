@@ -1,0 +1,62 @@
+@import '../../../../static/styles/colors.scss';
+
+.main-forum-table {
+    flex: 6;
+    background: $main-bg-800;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 104px -36px rgba(0,0,0,0.6);
+
+    .main-forum-title {
+        color: white;
+        font-size: 28px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+
+        i {
+            margin: 10px 0 0 6px;
+        }
+    }
+}
+
+.inner-table {
+    background-color: white;
+}
+
+.table-line-container {
+    padding: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s;
+
+    .table-line-heading {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .table-line-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 12px;
+        color: $main-accent-700;
+        font-weight: bold;
+    }
+
+
+    &:nth-of-type(even) {
+        background: $main-bg-200;
+
+        .table-line-footer {
+            color: white;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0px 0px 134px -41px black;
+    }
+}

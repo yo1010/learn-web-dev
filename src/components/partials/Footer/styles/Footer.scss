@@ -1,0 +1,11 @@
+@import '../../../../static/styles/colors.scss';
+
+.footer-container {
+    display: flex;
+    background-color: $main-bg-800;
+    height: 100px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

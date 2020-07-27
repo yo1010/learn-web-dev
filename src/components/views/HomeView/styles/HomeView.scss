@@ -1,0 +1,26 @@
+@import '../../../../static/styles/colors.scss';
+
+.home-view-container {
+    display: flex;
+    padding: 20px;
+}
+
+.home-view-intro {
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-view-inner-intro {
+    width: 65%;
+    text-align: center;
+
+    .home-view-heading {
+        font-size: 33px;
+    }
+    
+    .home-view-sub-heading {
+        color: $main-bg-200;
+    }
+}
