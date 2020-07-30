@@ -2,8 +2,7 @@
 
 .main-forum-table {
     flex: 6;
-    background: $main-bg-800;
-    padding: 10px;
+    background: $main-bg-800-transparent;
     margin: 10px;
     border-radius: 5px;
     box-shadow: 0px 0px 104px -36px rgba(0,0,0,0.6);
@@ -12,6 +11,7 @@
         color: white;
         font-size: 28px;
         margin-bottom: 15px;
+        padding: 10px;
         font-weight: bold;
         display: flex;
         justify-content: space-between;
@@ -23,18 +23,23 @@
 }
 
 .inner-table {
-    background-color: white;
+    background-color: transparent;
 }
 
 .table-line-container {
     padding: 10px;
-    background-color: white;
+    background-color: $main-bg-800-transparent-more;
     cursor: pointer;
     transition: transform 0.2s;
+
+    .table-line-message {
+        color: white;
+    }
 
     .table-line-heading {
         font-size: 20px;
         font-weight: bold;
+        color: white;
     }
 
     .table-line-footer {
@@ -48,7 +53,15 @@
 
 
     &:nth-of-type(even) {
-        background: $main-bg-200;
+        background: $main-bg-200-transparent;
+
+        .table-line-message {
+            color: $main-bg-800;
+        }
+
+        .table-line-heading {
+            color: $main-bg-800;
+        }
 
         .table-line-footer {
             color: white;

@@ -2,5 +2,7 @@
 
 .app {
     overflow-x: hidden;
-    background-color: $main-bg-500;
+    background: url(./static/assets/background.jpg);
+    background-position: center;
+    background-size: cover;
 }
