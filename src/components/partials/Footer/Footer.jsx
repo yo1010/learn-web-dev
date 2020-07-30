@@ -5,7 +5,7 @@ import './styles/Footer.scss';
 export default function Footer() {
     return (
         <div class='footer-container'>
-            Example Footer
+            Copyright 2020
         </div>
     )
 }
