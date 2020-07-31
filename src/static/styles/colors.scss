@@ -1,7 +1,10 @@
 //MAIN ACCENT COLOR - GREEN
 
-$main-accent-500: unquote("#72e6e8");
-$main-accent-700: unquote("#72e6e8");
+$main-accent-200: unquote("#72e6e8");
+
+//MAIN COMPLIMENTARY COLOR - RED
+
+$main-complimentary-500: unquote("#F64533");
 
 
 //MAIN BACKGROUND COLOR - GRAY
@@ -14,3 +17,5 @@ $main-bg-50: unquote("#E6EEF8");
 $main-bg-200-transparent: rgba(182, 196, 209, 0.5);
 $main-bg-800-transparent: rgba(52, 58, 64, 0.9);
 $main-bg-800-transparent-more: rgba(52, 58, 64, 0.5);
+
+$transparent-white: rgba(255, 255, 255, 0.5);

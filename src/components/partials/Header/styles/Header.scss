@@ -1,10 +1,19 @@
 @import '../../../../static/styles/colors.scss';
 
+.navbar {
+    background-color: $main-bg-800;
+}
+
 .green {
-    color: $main-accent-500;
+    color: $main-accent-200;
     font-weight: bold;
 }
 
 .btn {
-    background-color: $main-accent-500;
+    background-color: $main-accent-200;
+}
+
+.nav-input {
+    background-color: $transparent-white;
+    border: none;
 }
