@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MainForumTable from '../../partials/MainForumTable/MainForumTable';
 
 import './styles/HomeView.scss';
 
 
 const HomeView = () => {
+    const [welcomeMessage, setWelcomeMessage] = useState('');
+
+    // Create async function for fetching welcome message
+    const fetchMessage = async () => {
+        const message = await fetch('/users/all')
+            .then(res => res.text())
+        setWelcomeMessage(message)
+    }
+
+    useEffect(() => {
+        fetchMessage();
+    })
+
+    console.log(welcomeMessage)
     return (
         <React.Fragment>
             <div class="home-view-intro">
@@ -15,6 +29,7 @@ const HomeView = () => {
                     <h5 className="home-view-sub-heading">
                         Engage in inspiring conversation, explore most shared learning resources, browse jobs and internships
                     </h5>
+                    <h5></h5>
                 </div>
             </div>
             <div class="home-view-container">
