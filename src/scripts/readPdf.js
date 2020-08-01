@@ -1,9 +1,9 @@
-const fs = require('fs');
-const pdf = require('pdf-parse');
+import fs from 'fs';
+import * as pdf from 'pdf-parse';
 
 
-const readPdf = () => {
-    let dataBuffer = fs.readFileSync('../../YD.pdf');
+const readPdf = (pdfPath) => {
+    let dataBuffer = fs.readFileSync(pdfPath);
 
     pdf(dataBuffer).then(function(data) {
         // number of pages
@@ -23,6 +23,4 @@ const readPdf = () => {
     });
 };
 
-module.exports = {
-    readPdf: readPdf
-}
+export default readPdf;
