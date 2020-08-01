@@ -11,8 +11,7 @@ const cors = require('cors')
 // Import routes
 const homeRouter = require('./routes/homeRouter')
 const usersRouter = require('./routes/usersRouter')
-
-const pdfScraperScript = require('../src/scripts/pdfScraperScript')
+const { default: readPdf } = require('./scripts/readPdf')
 
 // Setup default port
 const PORT = process.env.PORT || 4000
@@ -35,9 +34,9 @@ if (process.env.NODE_ENV && process.env.NODE_ENV !== 'development') {
     })
 }
 
-// readPdf on /pdf path
 app.get('/pdf', (req, res) => {
-    res.send(pdfScraperScript.readPdf())
+    readPdf();
+    res.sendFile(require('./scripts/CV.json'))
 })
 
 // Implement route for '/api' endpoint

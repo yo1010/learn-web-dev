@@ -29,7 +29,6 @@ const HomeView = () => {
                     <h5 className="home-view-sub-heading">
                         Engage in inspiring conversation, explore most shared learning resources, browse jobs and internships
                     </h5>
-                    <h5></h5>
                 </div>
             </div>
             <div class="home-view-container">
