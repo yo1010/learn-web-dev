@@ -1,4 +1,5 @@
-let fs = require('fs'), PDFParser = require("pdf2json");
+let fs = require('fs')
+let PDFParser = require("pdf2json");
 
 
 const readPdf = () => {
@@ -6,10 +7,13 @@ const readPdf = () => {
 
     pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError) );
     pdfParser.on("pdfParser_dataReady", pdfData => {
-        fs.writeFile("./CV.json", JSON.stringify(pdfData));
+        const jsonPdf = JSON.stringify(pdfData);
+        return jsonPdf;
     });
 
     pdfParser.loadPDF('./YD.pdf');
 };
 
-export default readPdf;
+module.exports = {
+    readPdf: readPdf
+};

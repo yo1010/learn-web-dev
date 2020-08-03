@@ -11,7 +11,7 @@ const cors = require('cors')
 // Import routes
 const homeRouter = require('./routes/homeRouter')
 const usersRouter = require('./routes/usersRouter')
-const { default: readPdf } = require('./scripts/readPdf')
+const { readPdf } = require('./scripts/readPdf')
 
 // Setup default port
 const PORT = process.env.PORT || 4000
@@ -33,11 +33,6 @@ if (process.env.NODE_ENV && process.env.NODE_ENV !== 'development') {
         res.sendFile('build/index.html', { root: __dirname })
     })
 }
-
-app.get('/pdf', (req, res) => {
-    readPdf();
-    res.sendFile(require('./scripts/CV.json'))
-})
 
 // Implement route for '/api' endpoint
 app.use('/api', homeRouter)
