@@ -12,4 +12,6 @@ const readPdf = () => {
     pdfParser.loadPDF('./YD.pdf');
 };
 
-export default readPdf;
+module.exports = {
+    readPdf: readPdf
+}
