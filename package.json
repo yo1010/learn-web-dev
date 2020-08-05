@@ -23,7 +23,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "concurrently \"npm run start-server\" \"npm run start-front\" --kill-others",
     "start-server": "cross-env NODE_ENV=development nodemon server/index.js --watch server/*",

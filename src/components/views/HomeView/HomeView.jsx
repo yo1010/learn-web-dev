@@ -21,7 +21,7 @@ const HomeView = () => {
     console.log(welcomeMessage)
     return (
         <React.Fragment>
-            <div class="home-view-intro">
+            <div className="home-view-intro">
                 <div className="home-view-inner-intro">
                     <h1 className="home-view-heading">
                         Join our community of aspiring <span className="green">developers</span>
@@ -31,7 +31,7 @@ const HomeView = () => {
                     </h5>
                 </div>
             </div>
-            <div class="home-view-container">
+            <div className="home-view-container">
                 <MainForumTable tableTitle={'Latest Updates'} flexWidth='8' iconName='fa-graduation-cap' />
                 <MainForumTable tableTitle={'Other Questions'} flexWidth='4' iconName='fa-globe' />
             </div>
