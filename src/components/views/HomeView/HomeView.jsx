@@ -5,20 +5,6 @@ import './styles/HomeView.scss';
 
 
 const HomeView = () => {
-    const [welcomeMessage, setWelcomeMessage] = useState('');
-
-    // Create async function for fetching welcome message
-    const fetchMessage = async () => {
-        const message = await fetch('/users/all')
-            .then(res => res.text())
-        setWelcomeMessage(message)
-    }
-
-    useEffect(() => {
-        fetchMessage();
-    })
-
-    console.log(welcomeMessage)
     return (
         <React.Fragment>
             <div className="home-view-intro">
